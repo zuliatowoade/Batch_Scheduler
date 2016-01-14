@@ -1,33 +1,5 @@
 EXPECTED RESULT SAMPLE
-
-Part 1: Process Creator
-
-Grandchild process with process ID 3942 has completed.
-Child process with process ID 3941 has completed.
-Parent process with process ID 3940 has completed.
-
-
-
-Part 2:Process Terminator
-
-Killing a process that does not exist:
-
-Enter a process to kill: 
-123
-ERROR: Process does not exist.
-: No such process
-
-Killing a process:
-
-Enter a process to kill: 
-2544
-Killing: 2544
-
-where 2544 was another instance of bash
-
-
-
-Part 3: Batch Scheduler
+Batch Scheduler
 
 batch-shell> pwd ps quit
 program: pwd
