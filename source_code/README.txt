@@ -1,55 +1,5 @@
-DESIGN DOCUMENT FOR LAB 1
 
-QUESTION 1: Process Creator
-
-PURPOSE: To show how a number of children forked from a parent can be used.
-
-SPECIAL CONDITIONS NEEDED
-	* None
-
-HIGH LEVEL ENTITIES/DESIGN DECISIONS:
-	* The purpose of the block of code indicated as block1 is to fork the child and then the grandchild. Two pid_t values are used, one for the child and one for the grandchild. The fork for the grandchild
-	  is done inside of the child's process. The grandchild then waits for 10 seconds and then prints. After this, the child waits for the grandchild to finish before it prints.
-	  
-	* The purpose of the block of code indicated as block2 is to have the parent wait for its child to finish before printing. It follows the same procedure that the child did when it waits for its child to finish. 
-	  
-	  
-USAGE:
-	* Run gcc lab1_1.c -o lab1_1 (make sure you have a c compiler)
-	* Then run ./lab1_1
-	* The program then runs according to the specification
-	
-ASSUMPTIONS:
-	* None
-
-	
-	
-	
-QUESTION 2: Process Terminator
-
-PURPOSE: To act as a process kill function, where an entered process ID is killed if the user has the correct privileges and if it exists.
-
-SPECIAL CONDITIONS NEEDED
-	* None
-
-HIGH LEVEL ENTITIES/DESIGN DECISIONS:
-	* The purpose of the block of code indicated as block1 is to prompt the user for an integer value. This value is then stored into an int called pid. The system call kill is then called with this value passed.
-	  Depending on what happens with this call either Killing is printed or the corresponding error message is printed. The program then ends, returning the value that kill is equal to.
-	  
-	  
-USAGE:
-	* Run gcc lab1_2.c -o lab1_2 (make sure you have a c compiler)
-	* Then run ./lab1_2
-	* The program promts the user to enter the ID of a process to terminate
-	* The program then either prints a success message or an error message
-	
-ASSUMPTIONS:
-	* The user is expected to enter an integer value that represents the ID of a process.
-
-	
-	
-	
-QUESTION 3: Batch Scheduler
+TITLE: Batch Scheduler
 
 PURPOSE: To accept a string containing the list of programs to schedule from the user and run each sequentially.
 
